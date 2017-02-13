@@ -5,7 +5,7 @@ var https = require('https');
 function getAndPrintHTML (options) {
 
   /* Add your code here */
-  https.get(requestOptions, function (response) {
+  https.get(options, function (response) {
 
 	// set encoding of received data to UTF-8
 	response.setEncoding('utf8');
@@ -30,4 +30,4 @@ var requestOptions = {
   path: '/http-examples/step3.html'
 };
 
-getAndPrintHTML(requestOptions.host+requestOptions.path);
+getAndPrintHTML(requestOptions);
